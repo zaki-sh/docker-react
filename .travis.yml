@@ -1,8 +1,9 @@
+language: generic
 sudo: required
 services:
   - docker
 
-before_install
+before_install:
   - docker build -t zaki-sh/react-test -f ./client/Dockerfile.dev ./client
 
 script:
