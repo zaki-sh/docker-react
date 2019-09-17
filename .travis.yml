@@ -15,7 +15,7 @@ after_success:
   - docker build -t zaki-sh/multi-server ./server
   - docker build -t zaki-sh/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER\_PASSWORD" | docker login -u "$DOCKER\_ID" --password-stdin
   # Take those images and push to docker hub
   - docker push zaki-sh/multi-client
   - docker push zaki-sh/multi-nginx
