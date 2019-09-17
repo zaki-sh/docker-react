@@ -10,14 +10,14 @@ script:
   - docker run -e CI=true zaki-sh/react-test npm test
 
 after_success:
-  - docker build -t zaki-sh/multi-client ./client
-  - docker build -t zaki-sh/multi-nginx ./nginx
-  - docker build -t zaki-sh/multi-server ./server
-  - docker build -t zaki-sh/multi-worker ./worker
+  - docker build -t zaki1404/multi-client ./client
+  - docker build -t zaki1404/multi-nginx ./nginx
+  - docker build -t zaki1404/multi-server ./server
+  - docker build -t zaki1404/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKERPASSWORD" | docker login -u "$DOCKERID" --password-stdin
   # Take those images and push to docker hub
-  - docker push zaki-sh/multi-client
-  - docker push zaki-sh/multi-nginx
-  - docker push zaki-sh/multi-server
-  - docker push zaki-sh/multi-worker
+  - docker push zaki1404/multi-client
+  - docker push zaki1404/multi-nginx
+  - docker push zaki1404/multi-server
+  - docker push zaki1404/multi-worker
